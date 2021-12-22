@@ -1,1 +1,1 @@
-web: build/install/kotlinserver/bin/ktor-chat
+web: build/install/ktor-chat/bin/ktor-chat
