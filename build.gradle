@@ -8,6 +8,7 @@ group "com.example"
 version "0.0.1"
 mainClassName = "io.ktor.server.netty.EngineMain"
 
+
 repositories {
     mavenCentral()
 }
@@ -46,6 +47,10 @@ dependencies {
     testImplementation "io.insert-koin:koin-test:$koin_version"
     testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
 
+}
+
+task stage {
+    dependsOn installDist
 }
 
 compileKotlin {
