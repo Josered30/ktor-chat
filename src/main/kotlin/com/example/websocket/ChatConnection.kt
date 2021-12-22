@@ -1,0 +1,11 @@
+package com.example.websocket
+
+import io.ktor.http.cio.websocket.*
+import java.util.concurrent.atomic.AtomicInteger
+
+class ChatConnection(val session: DefaultWebSocketSession) {
+    companion object {
+        var lastId = AtomicInteger(0)
+    }
+    val name = "user${lastId.getAndIncrement()}"
+}
